@@ -15,14 +15,14 @@ loop:
   mov  bl, [eax]
   cmp  bl, 0               ; if cmp is true, we are at end of string
   je  loop_exit
-  inc exc                  ; count++
+  inc ecx                  ; count++
   cmp bl, 'Z'
   jle modify
   inc eax                  ; a++
   jmp loop
 
 modify: 
-  mov BYTE [eac], '*'
+  mov BYTE [eax], '*'
   inc eax
   jmp loop
 
