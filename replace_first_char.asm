@@ -2,9 +2,9 @@
 ; convery first characters of words in string to a 'w'
 
 section .text
-global func
+global _start
 
-func: 
+_start: 
   push ebp
   mov  ebp, esp
   mov  eax, DWORD [ebp+8] ; address of *a to eax
