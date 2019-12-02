@@ -11,9 +11,9 @@ _start:               ;tell linker entry point
     mov     ecx, msg   ;message to write
     mov     ebx, 1     ;file descriptor (stdout)
     mov     eax, 4     ;system call number (sys_write)
-    syscall
+    int 0x80
 
     mov     eax, 60      ;system call number (sys_exit)
     xor edi, edi ; exit code = 0
-    syscall
+    int 0x80
 
